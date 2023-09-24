@@ -1,0 +1,1 @@
+document.getElementById("header").innerHTML = "<h1>JavaScript</h1>";
