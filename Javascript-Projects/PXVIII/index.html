@@ -1,1 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript</title>
+</head>
+<body>
+<div id="header">
+  <h1>JavaScript</h1>
 
+</div>
+<div id="nav"> About |  Blog
+  <ul>
+    <li onclick="displayPage('Clicked')">Home</li>
+    <li onmouseover="displayPage('MouseOver')">About</li>
+    <li onmouseout="displayPage('Mouse Out')">Blog</li>
+    <li ondblclick="displayPage('Double Clicked')">Page 1</li>
+    <li oncopy="displayPage('Copied')">Page 2</li>
+    <li onmouseup="displayPage('Mouse up')">Page 3</li>
+  </ul>
+</div>
+<div id="content"> </div>
+<div id="section" onmouseover="displayred()" onmouseout="displaywhite()">
+  <h1>Home</h1>
+  <div id="content"> if you can findme and replaceme then this really works </div>
+  <div id="person"> </div>
+  <p>main page 🍉 🍉  of  website.<br>
+    This is just a new <span class="first">span</span> <span class="first">This is just a new div</span> </p>
+  <p> link to <a href="https://www.mongodb.com/languages/mern-stack-tutorial"> website </a> </p>
+    This is just a second <span class="second">span</span> <span class="second">This is another new div</span> In this section we added some images</p>
+  <p> <img id="image" onclick="img()"  src="mern.png"> </p>
+  <p> <img src="merrn.jpeg"> </p>
+</div>
+<div id="tex"  onclick="Text()"> mongodb </div>
+
+<div id="footer"  onclick="newText()"> Copyright © MicroWorks.com </div>
+<script src="script.js"></script>
+
+</body>
+
+</html>
