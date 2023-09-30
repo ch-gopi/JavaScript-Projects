@@ -527,7 +527,6 @@ A Singleton is an object which can only be instantiated one time. Repeated calls
 var object = new (function () {
   this.name = "Sudheer";
 })();
-⬆ Back to Top
 
 What is a prototype chain
 Prototype chaining is used to build new types of objects based on existing ones. It is similar to inheritance in a class based language.
@@ -536,7 +535,7 @@ The prototype on object instance is available through Object.getPrototypeOf(obje
 
 Screenshot
 
-⬆ Back to Top
+
 
 What is the difference between Call, Apply and Bind
 The difference between Call, Apply and Bind can be explained with below examples,
@@ -597,7 +596,6 @@ JSON.parse(text);
 Stringification: converting a native object to a string so it can be transmitted across the network
 
 JSON.stringify(object);
-⬆ Back to Top
 
 What is the purpose of the array slice method
 The slice() method returns the selected elements in an array as a new array object. It selects the elements starting at the given start argument, and ends at the given optional end argument without including the last element. If you omit the second argument then it selects till the end.
@@ -610,7 +608,7 @@ let arrayIntegers2 = arrayIntegers.slice(2, 3); // returns [3]
 let arrayIntegers3 = arrayIntegers.slice(4); //returns [5]
 Note: Slice method won't mutate the original array but it returns the subset as a new array.
 
-⬆ Back to Top
+
 
 What is the purpose of the array splice method
 The splice() method is used either adds/removes items to/from an array, and then returns the removed item. The first argument specifies the array position for insertion or deletion whereas the optional second argument indicates the number of elements to be deleted. Each additional argument is added to the array.
@@ -626,7 +624,7 @@ let arrayIntegers2 = arrayIntegersOriginal2.splice(3); // returns [4, 5]; origin
 let arrayIntegers3 = arrayIntegersOriginal3.splice(3, 1, "a", "b", "c"); //returns [4]; original array: [1, 2, 3, "a", "b", "c", 5]
 Note: Splice method modifies the original array and returns the deleted array.
 
-⬆ Back to Top
+
 
 What is the difference between slice and splice
 Some of the major difference in a tabular form
@@ -635,7 +633,7 @@ Slice	Splice
 Doesn't modify the original array(immutable)	Modifies the original array(mutable)
 Returns the subset of original array	Returns the deleted elements as array
 Used to pick the elements from array	Used to insert or delete elements to/from array
-⬆ Back to Top
+
 
 How do you compare Object and Map
 Objects are similar to Maps in that both let you set keys to values, retrieve those values, delete keys, and detect whether something is stored at a key. Due to this reason, Objects have been used as Maps historically. But there are important differences that make using a Map preferable in certain cases.
@@ -646,7 +644,7 @@ You can get the size of a Map easily with the size property, while the number of
 A Map is an iterable and can thus be directly iterated, whereas iterating over an Object requires obtaining its keys in some fashion and iterating over them.
 An Object has a prototype, so there are default keys in the map that could collide with your keys if you're not careful. As of ES5 this can be bypassed by using map = Object.create(null), but this is seldom done.
 A Map may perform better in scenarios involving frequent addition and removal of key pairs.
-⬆ Back to Top
+
 
 What is the difference between == and === operators
 JavaScript provides both strict(===, !==) and type-converting(==, !=) equality comparison. The strict operators take type of variable in consideration, while non-strict operators make type correction/conversion based upon values of variables. The strict operators follow the below conditions for different types,
@@ -670,12 +668,11 @@ null === undefined // false
 '0' === false // false
 []==[] or []===[] //false, refer different objects in memory
 {}=={} or {}==={} //false, refer different objects in memory
-⬆ Back to Top
+
 
 What are lambda or arrow functions
 An arrow function is a shorter syntax for a function expression and does not have its own this, arguments, super, or new.target. These functions are best suited for non-method functions, and they cannot be used as constructors.
 
-⬆ Back to Top
 
 What is a first class function
 In Javascript, functions are first class objects. First-class functions means when functions in that language are treated like any other variable.
@@ -684,13 +681,12 @@ For example, in such a language, a function can be passed as an argument to othe
 
 const handler = () => console.log("This is a click handler function");
 document.addEventListener("click", handler);
-⬆ Back to Top
+
 
 What is a first order function
 A first-order function is a function that doesn’t accept another function as an argument and doesn’t return a function as its return value.
 
 const firstOrder = () => console.log("I am a first order function!");
-⬆ Back to Top
 
 What is a higher order function
 A higher-order function is a function that accepts another function as an argument or returns a function as a return value or both.
@@ -700,14 +696,12 @@ const firstOrderFunc = () =>
 const higherOrder = (ReturnFirstOrderFunc) => ReturnFirstOrderFunc();
 higherOrder(firstOrderFunc);
 ⬆ Back to Top
-
 What is a unary function
 A unary function (i.e. monadic) is a function that accepts exactly one argument. It stands for a single argument accepted by a function.
 
 Let us take an example of unary function,
 
 const unaryFunction = (a) => console.log(a + 10); // Add 10 to the given argument and display the value
-⬆ Back to Top
 
 What is the currying function
 Currying is the process of taking a function with multiple arguments and turning it into a sequence of functions each with only a single argument. Currying is named after a mathematician Haskell Curry. By applying currying, an n-ary function turns into a unary function.
@@ -723,7 +717,7 @@ curryUnaryFunction(1)(2); // returns a function: c => 3 + c
 curryUnaryFunction(1)(2)(3); // returns the number 6
 Curried functions are great to improve code reusability and functional composition.
 
-⬆ Back to Top
+
 
 What is a pure function
 A Pure function is a function where the return value is only determined by its arguments without any side effects. i.e, If you call a function with the same arguments 'n' number of times and 'n' number of places in the application then it will always return the same value.
@@ -746,7 +740,7 @@ As per the above code snippets, the Push function is impure itself by altering t
 
 Remember that Pure functions are important as they simplify unit testing without any side effects and no need for dependency injection. They also avoid tight coupling and make it harder to break your application by not having any side effects. These principles are coming together with the Immutability concept of ES6: giving preference to const over let usage.
 
-⬆ Back to Top
+
 
 What is the purpose of the let keyword
 The let statement declares a block scope local variable. Hence the variables defined with let keyword are limited in scope to the block, statement, or expression on which it is used. Whereas variables declared with the var keyword used to define a variable globally, or locally to an entire function regardless of block scope.
@@ -759,7 +753,6 @@ if (counter === 30) {
   console.log(counter); // 31
 }
 console.log(counter); // 30 (because the variable in if block won't exist here)
-⬆ Back to Top
 
 What is the difference between let and var
 You can list out the differences in a tabular format
@@ -781,12 +774,11 @@ function userDetails(username) {
   console.log(age); //error: age is not defined(due to block scope)
 }
 userDetails("John");
-⬆ Back to Top
+
 
 What is the reason to choose the name let as a keyword
 let is a mathematical statement that was adopted by early programming languages like Scheme and Basic. It has been borrowed from dozens of other languages that use let already as a traditional keyword as close to var as possible.
 
-⬆ Back to Top
 
 How do you redeclare variables in a switch block without an error
 If you try to redeclare variables in a switch block then it will cause errors because there is only one block. For example, the below code block throws a syntax error as below,
@@ -814,7 +806,7 @@ switch (x) {
     break;
   }
 }
-⬆ Back to Top
+
 
 What is the Temporal Dead Zone
 The Temporal Dead Zone is a behavior in JavaScript that occurs when declaring a variable with the let and const keywords, but not with var. In ECMAScript 6, accessing a let or const variable before its declaration (within its scope) causes a ReferenceError. The time span when that happens, between the creation of a variable’s binding and its declaration, is called the temporal dead zone.
@@ -827,7 +819,7 @@ function somemethod() {
   var counter1 = 1;
   let counter2 = 2;
 }
-⬆ Back to Top
+
 
 What is an IIFE (Immediately Invoked Function Expression)
 IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined. The signature of it would be as below,
@@ -896,7 +888,7 @@ function message(name) {
 }
 This hoisting makes functions to be safely used in code before they are declared.
 
-⬆ Back to Top
+
 
 What are classes in ES6
 In ES6, Javascript classes are primarily syntactic sugar over JavaScript’s existing prototype-based inheritance. For example, the prototype based inheritance written in function expression as below,
@@ -921,7 +913,7 @@ class Bike {
     return this.model + " bike has" + this.color + " color";
   }
 }
-⬆ Back to Top
+
 
 What are closures
 A closure is the combination of a function and the lexical environment within which that function was declared. i.e, It is an inner function that has access to the outer or enclosing function’s variables. The closure has three scope chains
@@ -942,12 +934,11 @@ myFunction("Welcome "); //Output: Welcome John
 myFunction("Hello Mr."); //output: Hello Mr.John
 As per the above code, the inner function(i.e, greetingInfo) has access to the variables in the outer function scope(i.e, Welcome) even after the outer function has returned.
 
-⬆ Back to Top
 
 What are modules
 Modules refer to small units of independent, reusable code and also act as the foundation of many JavaScript design patterns. Most of the JavaScript modules export an object literal, a function, or a constructor
 
-⬆ Back to Top
+
 
 Why do you need modules
 Below are the list of benefits using modules in javascript ecosystem
@@ -955,44 +946,40 @@ Below are the list of benefits using modules in javascript ecosystem
 Maintainability
 Reusability
 Namespacing
-⬆ Back to Top
+
 
 What is scope in javascript
 Scope is the accessibility of variables, functions, and objects in some particular part of your code during runtime. In other words, scope determines the visibility of variables and other resources in areas of your code.
 
-⬆ Back to Top
 
 What is a service worker
 A Service worker is basically a script (JavaScript file) that runs in the background, separate from a web page and provides features that don't need a web page or user interaction. Some of the major features of service workers are Rich offline experiences(offline first web application development), periodic background syncs, push notifications, intercept and handle network requests and programmatically managing a cache of responses.
 
-⬆ Back to Top
+
 
 How do you manipulate DOM using a service worker
 Service worker can't access the DOM directly. But it can communicate with the pages it controls by responding to messages sent via the postMessage interface, and those pages can manipulate the DOM.
 
-⬆ Back to Top
 
 How do you reuse information across service worker restarts
 The problem with service worker is that it gets terminated when not in use, and restarted when it's next needed, so you cannot rely on global state within a service worker's onfetch and onmessage handlers. In this case, service workers will have access to IndexedDB API in order to persist and reuse across restarts.
 
-⬆ Back to Top
 
 What is IndexedDB
 IndexedDB is a low-level API for client-side storage of larger amounts of structured data, including files/blobs. This API uses indexes to enable high-performance searches of this data.
 
-⬆ Back to Top
+
 
 What is web storage
 Web storage is an API that provides a mechanism by which browsers can store key/value pairs locally within the user's browser, in a much more intuitive fashion than using cookies. The web storage provides two mechanisms for storing data on the client.
 
 Local storage: It stores data for current origin with no expiration date.
 Session storage: It stores data for one session and the data is lost when the browser tab is closed.
-⬆ Back to Top
+
 
 What is a post message
 Post message is a method that enables cross-origin communication between Window objects.(i.e, between a page and a pop-up that it spawned, or between a page and an iframe embedded within it). Generally, scripts on different pages are allowed to access each other if and only if the pages follow same-origin policy(i.e, pages share the same protocol, port number, and host).
 
-⬆ Back to Top
 
 What is a Cookie
 A cookie is a piece of data that is stored on your computer to be accessed by your browser. Cookies are saved as key/value pairs. For example, you can create a cookie named username as below,
@@ -1000,14 +987,12 @@ A cookie is a piece of data that is stored on your computer to be accessed by yo
 document.cookie = "username=John";
 Screenshot
 
-⬆ Back to Top
-
 Why do you need a Cookie
 Cookies are used to remember information about the user profile(such as username). It basically involves two steps,
 
 When a user visits a web page, the user profile can be stored in a cookie.
 Next time the user visits the page, the cookie remembers the user profile.
-⬆ Back to Top
+
 
 What are the options in a cookie
 There are few below options available for a cookie,
@@ -1016,7 +1001,7 @@ By default, the cookie is deleted when the browser is closed but you can change 
 document.cookie = "username=John; expires=Sat, 8 Jun 2019 12:00:00 UTC";
 By default, the cookie belongs to a current page. But you can tell the browser what path the cookie belongs to using a path parameter.
 document.cookie = "username=John; path=/services";
-⬆ Back to Top
+
 
 How do you delete a cookie
 You can delete a cookie by setting the expiry date as a passed date. You don't need to specify a cookie value in this case. For example, you can delete a username cookie in the current page as below.
@@ -1025,7 +1010,6 @@ document.cookie =
   "username=; expires=Fri, 07 Jun 2019 00:00:00 UTC; path=/;";
 Note: You should define the cookie path option to ensure that you delete the right cookie. Some browsers doesn't allow to delete a cookie unless you specify a path parameter.
 
-⬆ Back to Top
 
 What are the differences between cookie, local storage and session storage
 Below are some of the differences between cookie, local storage and session storage,
@@ -1035,7 +1019,7 @@ Accessed on client or server side	Both server-side & client-side	client-side onl
 Lifetime	As configured using Expires option	until deleted	until tab is closed
 SSL support	Supported	Not supported	Not supported
 Maximum data size	4KB	5 MB	5MB
-⬆ Back to Top
+
 
 What is the main difference between localStorage and sessionStorage
 LocalStorage is the same as SessionStorage but it persists the data even when the browser is closed and reopened(i.e it has no expiration time) whereas in sessionStorage data gets cleared when the page session ends.
@@ -1047,7 +1031,7 @@ The Window object implements the WindowLocalStorage and WindowSessionStorage obj
 
 localStorage.setItem("logo", document.getElementById("logo").value);
 localStorage.getItem("logo");
-⬆ Back to Top
+
 
 What are the methods available on session storage
 The session storage provided methods for reading, writing and clearing the session data
@@ -1063,7 +1047,6 @@ sessionStorage.removeItem("key");
 
 // Remove all saved data from sessionStorage
 sessionStorage.clear();
-⬆ Back to Top
 
 What is a storage event and its event handler
 The StorageEvent is an event that fires when a storage area has been changed in the context of another document. Whereas onstorage property is an EventHandler for processing storage events. The syntax would be as below
@@ -1087,8 +1070,6 @@ window.onstorage = function (e) {
 Why do you need web storage
 Web storage is more secure, and large amounts of data can be stored locally, without affecting website performance. Also, the information is never transferred to the server. Hence this is a more recommended approach than Cookies.
 
-⬆ Back to Top
-
 How do you check web storage browser support
 You need to check browser support for localStorage and sessionStorage before using web storage,
 
@@ -1097,7 +1078,7 @@ if (typeof Storage !== "undefined") {
 } else {
   // Sorry! No Web Storage support..
 }
-⬆ Back to Top
+
 
 How do you check web workers browser support
 You need to check browser support for web workers before using it
@@ -1171,12 +1152,9 @@ The action flow of a promise will be as below,
 
 Screenshot
 
-⬆ Back to Top
-
 Why do you need a promise
 Promises are used to handle asynchronous operations. They provide an alternative approach for callbacks by reducing the callback hell and writing the cleaner code.
 
-⬆ Back to Top
 
 What are the three states of promise
 Promises have three states:
@@ -1184,7 +1162,7 @@ Promises have three states:
 Pending: This is an initial state of the Promise before an operation begins
 Fulfilled: This state indicates that the specified operation was completed.
 Rejected: This state indicates that the operation did not complete. In this case an error value will be thrown.
-⬆ Back to Top
+
 
 What is a callback function
 A callback function is a function passed into another function as an argument. This function is invoked inside the outer function to complete an action. Let's take a simple example of how to use callback function
@@ -1199,7 +1177,6 @@ function outerFunction(callback) {
 }
 
 outerFunction(callbackFunction);
-⬆ Back to Top
 
 Why do we need callbacks
 The callbacks are needed because javascript is an event driven language. That means instead of waiting for a response javascript will keep executing while listening for other events. Let's take an example with the first function invoking an API call(simulated by setTimeout) and the next function which logs the message.
@@ -1221,7 +1198,7 @@ Output;
 // First function called
 As observed from the output, javascript didn't wait for the response of the first function and the remaining code block got executed. So callbacks are used in a way to make sure that certain code doesn’t execute until the other code finishes execution.
 
-⬆ Back to Top
+
 
 What is a callback hell
 Callback Hell is an anti-pattern with multiple nested callbacks which makes code hard to read and debug when dealing with asynchronous logic. The callback hell looks like below,
@@ -1235,12 +1212,9 @@ async1(function(){
         });
     });
 });
-⬆ Back to Top
 
 What are server-sent events
 Server-sent events (SSE) is a server push technology enabling a browser to receive automatic updates from a server via HTTP connection without resorting to polling. These are a one way communications channel - events flow from server to client only. This has been used in Facebook/Twitter updates, stock price updates, news feeds etc.
-
-⬆ Back to Top
 
 How do you receive server-sent event notifications
 The EventSource object is used to receive server-sent event notifications. For example, you can receive messages from server as below,
@@ -1251,7 +1225,6 @@ if (typeof EventSource !== "undefined") {
     document.getElementById("output").innerHTML += event.data + "<br>";
   };
 }
-⬆ Back to Top
 
 How do you check browser support for server-sent events
 You can perform browser support for server-sent events before using it as below,
@@ -1261,7 +1234,7 @@ if (typeof EventSource !== "undefined") {
 } else {
   // No server-sent events supported
 }
-⬆ Back to Top
+
 
 What are the events available for server sent events
 Below are the list of events available for server sent events
@@ -1270,7 +1243,7 @@ Event	Description
 onopen	It is used when a connection to the server is opened
 onmessage	This event is used when a message is received
 onerror	It happens when an error occurs
-⬆ Back to Top
+
 
 What are the main rules of promise
 A promise must follow a specific set of rules:
@@ -1296,7 +1269,7 @@ loadScript("/script1.js", function (script) {
     });
   });
 });
-⬆ Back to Top
+
 
 What is promise chaining
 The process of executing a sequence of asynchronous tasks one after another using promises is known as Promise chaining. Let's take an example of promise chaining for calculating the final result,
@@ -1322,7 +1295,7 @@ The initial promise resolves in 1 second,
 After that .then handler is called by logging the result(1) and then return a promise with the value of result * 2.
 After that the value passed to the next .then handler by logging the result(2) and return a promise with result * 3.
 Finally the value passed to the last .then handler by logging the result(6) and return a promise with result * 4.
-⬆ Back to Top
+
 
 What is promise.all
 Promise.all is a promise that takes an array of promises as an input (an iterable), and it gets resolved when all the promises get resolved or any one of them gets rejected. For example, the syntax of promise.all method is below,
@@ -1330,7 +1303,7 @@ Promise.all is a promise that takes an array of promises as an input (an iterabl
 Promise.all([Promise1, Promise2, Promise3]) .then(result) => {   console.log(result) }) .catch(error => console.log(`Error in promises ${error}`))
 Note: Remember that the order of the promises(output the result) is maintained as per input order.
 
-⬆ Back to Top
+
 
 What is the purpose of the race method in promise
 Promise.race() method will return the promise instance which is firstly resolved or rejected. Let's take an example of race() method where promise2 is resolved first
@@ -1345,17 +1318,15 @@ var promise2 = new Promise(function (resolve, reject) {
 Promise.race([promise1, promise2]).then(function (value) {
   console.log(value); // "two" // Both promises will resolve, but promise2 is faster
 });
-⬆ Back to Top
+
 
 What is a strict mode in javascript
 Strict Mode is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a “strict” operating context. This way it prevents certain actions from being taken and throws more exceptions. The literal expression "use strict"; instructs the browser to use the javascript code in the Strict mode.
 
-⬆ Back to Top
 
 Why do you need strict mode
 Strict mode is useful to write "secure" JavaScript by notifying "bad syntax" into real errors. For example, it eliminates accidentally creating a global variable by throwing an error and also throws an error for assignment to a non-writable property, a getter-only property, a non-existing property, a non-existing variable, or a non-existing object.
 
-⬆ Back to Top
 
 How do you declare strict mode
 The strict mode is declared by adding "use strict"; to the beginning of a script or a function. If declared at the beginning of a script, it has global scope.
@@ -1371,7 +1342,6 @@ function myFunction() {
   "use strict";
   y = 3.14; // This will cause an error
 }
-⬆ Back to Top
 
 What is the purpose of double exclamation
 The double exclamation or negation(!!) ensures the resulting type is a boolean. If it was falsey (e.g. 0, null, undefined, etc.), it will be false, otherwise, it will be true. For example, you can test IE version using this expression as below,
@@ -1384,7 +1354,6 @@ If you don't use this expression then it returns the original value.
 console.log(navigator.userAgent.match(/MSIE 8.0/)); // returns either an Array or null
 Note: The expression !! is not an operator, but it is just twice of ! operator.
 
-⬆ Back to Top
 
 What is the purpose of the delete operator
 The delete keyword is used to delete the property as well as its value.
@@ -1393,7 +1362,7 @@ var user = { name: "John", age: 20 };
 delete user.age;
 
 console.log(user); // {name: "John"}
-⬆ Back to Top
+
 
 What is typeof operator
 You can use the JavaScript typeof operator to find the type of a JavaScript variable. It returns the type of a variable or an expression.
@@ -1401,7 +1370,6 @@ You can use the JavaScript typeof operator to find the type of a JavaScript vari
 typeof "John Abraham"; // Returns "string"
 typeof (1 + 2); // Returns "number"
 typeof [1, 2, 3]; // Returns "object" because all arrays are also objects
-⬆ Back to Top
 
 What is undefined property
 The undefined property indicates that a variable has not been assigned a value, or declared but not initialized at all. The type of undefined value is undefined too.
@@ -1411,14 +1379,13 @@ console.log(typeof user); //undefined
 Any variable can be emptied by setting the value to undefined.
 
 user = undefined;
-⬆ Back to Top
+
 
 What is null value
 The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values. The type of null value is object. You can empty the variable by setting the value to null.
 
 var user = null;
 console.log(typeof user); //object
-⬆ Back to Top
 
 What is the difference between null and undefined
 Below are the main differences between null and undefined,
@@ -1429,13 +1396,11 @@ Type of null is object	Type of undefined is undefined
 The null value is a primitive value that represents the null, empty, or non-existent reference.	The undefined value is a primitive value used when a variable has not been assigned a value.
 Indicates the absence of a value for a variable	Indicates absence of variable itself
 Converted to zero (0) while performing primitive operations	Converted to NaN while performing primitive operations
-⬆ Back to Top
 
 What is eval
 The eval() function evaluates JavaScript code represented as a string. The string can be a JavaScript expression, variable, statement, or sequence of statements.
 
 console.log(eval("1 + 2")); //  3
-⬆ Back to Top
 
 What is the difference between window and document
 Below are the main differences between window and document,
@@ -1444,7 +1409,6 @@ Window	Document
 It is the root level element in any web page	It is the direct child of the window object. This is also known as Document Object Model(DOM)
 By default window object is available implicitly in the page	You can access it via window.document or document.
 It has methods like alert(), confirm() and properties like document, location	It provides methods like getElementById, getElementsByTagName, createElement etc
-⬆ Back to Top
 
 How do you access history in javascript
 The window.history object contains the browser's history. You can load previous and next URLs in the history using back() and next() methods.
@@ -1457,7 +1421,7 @@ function goForward() {
 }
 Note: You can also access history without window prefix.
 
-⬆ Back to Top
+
 
 How do you detect caps lock key turned on or not
 The mouseEvent getModifierState() is used to return a boolean value that indicates whether the specified modifier key is activated or not. The modifiers such as CapsLock, ScrollLock and NumLock are activated when they are clicked, and deactivated when they are clicked again.
@@ -1479,14 +1443,14 @@ Let's take an input element to detect the CapsLock on/off behavior with an examp
     }
   }
 </script>
-⬆ Back to Top
+
 
 What is isNaN
 The isNaN() function is used to determine whether a value is an illegal number (Not-a-Number) or not. i.e, This function returns true if the value equates to NaN. Otherwise it returns false.
 
 isNaN("Hello"); //true
 isNaN("100"); //false
-⬆ Back to Top
+
 
 What are the differences between undeclared and undefined variables
 Below are the major differences between undeclared(not defined) and undefined variables,
@@ -1494,25 +1458,24 @@ Below are the major differences between undeclared(not defined) and undefined va
 undeclared	undefined
 These variables do not exist in a program and are not declared	These variables declared in the program but have not assigned any value
 If you try to read the value of an undeclared variable, then a runtime error is encountered	If you try to read the value of an undefined variable, an undefined value is returned.
-⬆ Back to Top
+
 
 What are global variables
 Global variables are those that are available throughout the length of the code without any scope. The var keyword is used to declare a local variable but if you omit it then it will become global variable
 
 msg = "Hello"; // var is missing, it becomes global variable
-⬆ Back to Top
+
 
 What are the problems with global variables
 The problem with global variables is the conflict of variable names of local and global scope. It is also difficult to debug and test the code that relies on global variables.
 
-⬆ Back to Top
 
 What is NaN property
 The NaN property is a global property that represents "Not-a-Number" value. i.e, It indicates that a value is not a legal number. It is very rare to use NaN in a program but it can be used as return value for few cases
 
 Math.sqrt(-1);
 parseInt("Hello");
-⬆ Back to Top
+
 
 What is the purpose of isFinite function
 The isFinite() function is used to determine whether a number is a finite, legal number. It returns false if the value is +infinity, -infinity, or NaN (Not-a-Number), otherwise it returns true.
@@ -1522,24 +1485,23 @@ isFinite(NaN); // false
 isFinite(-Infinity); // false
 
 isFinite(100); // true
-⬆ Back to Top
+
 
 What is an event flow
 Event flow is the order in which event is received on the web page. When you click an element that is nested in various other elements, before your click actually reaches its destination, or target element, it must trigger the click event for each of its parent elements first, starting at the top with the global window object. There are two ways of event flow
 
 Top to Bottom(Event Capturing)
 Bottom to Top (Event Bubbling)
-⬆ Back to Top
+
 
 What is event bubbling
 Event bubbling is a type of event propagation where the event first triggers on the innermost target element, and then successively triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element.
 
-⬆ Back to Top
+
 
 What is event capturing
 Event capturing is a type of event propagation where the event is first captured by the outermost element, and then successively triggers on the descendants (children) of the target element in the same nesting hierarchy till it reaches the innermost DOM element.
 
-⬆ Back to Top
 
 How do you submit a form using JavaScript
 You can submit a form using document.forms[0].submit(). All the form input's information is submitted using onsubmit event handler
@@ -1547,23 +1509,20 @@ You can submit a form using document.forms[0].submit(). All the form input's inf
 function submit() {
   document.forms[0].submit();
 }
-⬆ Back to Top
+
 
 How do you find operating system details
 The window.navigator object contains information about the visitor's browser OS details. Some of the OS properties are available under platform property,
 
 console.log(navigator.platform);
-⬆ Back to Top
+
 
 What is the difference between document load and DOMContentLoaded events
 The DOMContentLoaded event is fired when the initial HTML document has been completely loaded and parsed, without waiting for assets(stylesheets, images, and subframes) to finish loading. Whereas The load event is fired when the whole page has loaded, including all dependent resources(stylesheets, images).
 
-⬆ Back to Top
 
 What is the difference between native, host and user objects
 Native objects are objects that are part of the JavaScript language defined by the ECMAScript specification. For example, String, Math, RegExp, Object, Function etc core objects defined in the ECMAScript spec. Host objects are objects provided by the browser or runtime environment (Node). For example, window, XmlHttpRequest, DOM nodes etc are considered as host objects. User objects are objects defined in the javascript code. For example, User objects created for profile information.
-
-⬆ Back to Top
 
 What are the tools or techniques used for debugging JavaScript code
 You can use below tools or techniques for debugging javascript
@@ -1571,7 +1530,7 @@ You can use below tools or techniques for debugging javascript
 Chrome Devtools
 debugger statement
 Good old console.log statement
-⬆ Back to Top
+
 
 What are the pros and cons of promises over callbacks
 Below are the list of pros and cons of promises over callbacks,
@@ -1586,7 +1545,7 @@ Cons:
 
 It makes little complex code
 You need to load a polyfill if ES6 is not supported
-⬆ Back to Top
+
 
 What is the difference between an attribute and a property
 Attributes are defined on the HTML markup whereas properties are defined on the DOM. For example, the below HTML element has 2 attributes type and value,
@@ -1601,12 +1560,11 @@ And after you change the value of the text field to "Good evening", it becomes l
 
 console.log(input.getAttribute("value")); // Good evening
 console.log(input.value); // Good evening
-⬆ Back to Top
 
 What is same-origin policy
 The same-origin policy is a policy that prevents JavaScript from making requests across domain boundaries. An origin is defined as a combination of URI scheme, hostname, and port number. If you enable this policy then it prevents a malicious script on one page from obtaining access to sensitive data on another web page using Document Object Model(DOM).
 
-⬆ Back to Top
+
 
 What is the purpose of void 0
 Void(0) is used to prevent the page from refreshing. This will be helpful to eliminate the unwanted side-effect, because it will return the undefined primitive value. It is commonly used for HTML documents that use href="JavaScript:Void(0);" within an <a> element. i.e, when you click a link, the browser loads a new page or refreshes the same page. But this behavior will be prevented using this expression. For example, the below link notify the message without reloading the page
@@ -1614,22 +1572,20 @@ Void(0) is used to prevent the page from refreshing. This will be helpful to eli
 <a href="JavaScript:void(0);" onclick="alert('Well done!')">
   Click Me!
 </a>
-⬆ Back to Top
 
 Is JavaScript a compiled or interpreted language
 JavaScript is an interpreted language, not a compiled language. An interpreter in the browser reads over the JavaScript code, interprets each line, and runs it. Nowadays modern browsers use a technology known as Just-In-Time (JIT) compilation, which compiles JavaScript to executable bytecode just as it is about to run.
 
-⬆ Back to Top
 
 Is JavaScript a case-sensitive language
 Yes, JavaScript is a case sensitive language. The language keywords, variables, function & object names, and any other identifiers must always be typed with a consistent capitalization of letters.
 
-⬆ Back to Top
+
 
 Is there any relation between Java and JavaScript
 No, they are entirely two different programming languages and have nothing to do with each other. But both of them are Object Oriented Programming languages and like many other languages, they follow similar syntax for basic features(if, else, for, switch, break, continue etc).
 
-⬆ Back to Top
+
 
 What are events
 Events are "things" that happen to HTML elements. When JavaScript is used in HTML pages, JavaScript can react on these events. Some of the examples of HTML events are,
@@ -1652,12 +1608,12 @@ Let's describe the behavior of click event for button element,
    <button type="button" onclick="greeting()">Click me</button>
  </body>
 </html>
-⬆ Back to Top
+
 
 Who created javascript
 JavaScript was created by Brendan Eich in 1995 during his time at Netscape Communications. Initially it was developed under the name Mocha, but later the language was officially called LiveScript when it first shipped in beta releases of Netscape.
 
-⬆ Back to Top
+
 
 What is the use of preventDefault method
 The preventDefault() method cancels the event if it is cancelable, meaning that the default action or behaviour that belongs to the event will not occur. For example, prevent form submission when clicking on submit button and prevent opening the page URL when clicking on hyperlink are some common use cases.
@@ -1830,7 +1786,7 @@ function stop() {
     clearInterval(msg);
 }
 </script>
-⬆ Back to Top
+
 
 How do you redirect new page in javascript
 In vanilla javascript, you can redirect to a new page using the location property of window object. The syntax would be as follows,
@@ -1855,7 +1811,7 @@ Using RegEx: The advanced solution is using Regular expression's test method(Reg
 var mainString = "hello",
   regex = /hell/;
 regex.test(mainString);
-⬆ Back to Top
+
 
 How do you validate an email in javascript
 You can validate an email in javascript using regular expressions. It is recommended to do validations on the server side instead of the client side. Because the javascript can be disabled on the client side.
@@ -1865,7 +1821,7 @@ function validateEmail(email) {
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
-⬆ Back to Top
+
 
 The above regular expression accepts unicode characters.
 
@@ -1873,7 +1829,7 @@ How do you get the current url with javascript
 You can use window.location.href expression to get the current url path and you can use the same expression for updating the URL too. You can also use document.URL for read-only purposes but this solution has issues in FF.
 
 console.log("location.href", window.location.href); // Returns full URL
-⬆ Back to Top
+
 
 What are the various url properties of location object
 The below Location object properties can be used to access URL components of the page,
@@ -1893,7 +1849,7 @@ You can use URLSearchParams to get query string values in javascript. Let's see 
 
 const urlParams = new URLSearchParams(window.location.search);
 const clientCode = urlParams.get("clientCode");
-⬆ Back to Top
+
 
 How do you check if a key exists in an object
 You can check whether a key exists in an object or not using three approaches,
@@ -1912,7 +1868,6 @@ const user = {
 
 console.log(user.name !== undefined); // true
 console.log(user.nickName !== undefined); // false
-⬆ Back to Top
 
 How do you loop through or enumerate javascript object
 You can use the for-in loop to loop through javascript object. You can also make sure that the key you get is an actual property of an object, and doesn't come from the prototype using hasOwnProperty method.
@@ -1928,7 +1883,7 @@ for (var key in object) {
     console.log(key + " -> " + object[key]); // k1 -> value1 ...
   }
 }
-⬆ Back to Top
+
 
 How do you test for an empty object
 There are different solutions based on ECMAScript versions
@@ -1947,7 +1902,6 @@ function isEmpty(obj) {
 
   return JSON.stringify(obj) === JSON.stringify({});
 }
-⬆ Back to Top
 
 What is an arguments object
 The arguments object is an Array-like object accessible inside functions that contains the values of the arguments passed to that function. For example, let's see how to use arguments object inside sum function,
@@ -1964,7 +1918,6 @@ sum(1, 2, 3); // returns 6
 Note: You can't apply array methods on arguments object. But you can convert into a regular array as below.
 
 var argsArray = Array.prototype.slice.call(arguments);
-⬆ Back to Top
 
 How do you make first letter of the string in an uppercase
 You can create a function which uses a chain of string methods such as charAt, toUpperCase and slice methods to generate a string with the first letter in uppercase.
@@ -1972,7 +1925,7 @@ You can create a function which uses a chain of string methods such as charAt, t
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
-⬆ Back to Top
+
 
 What are the pros and cons of for loop
 The for-loop is a commonly used iteration syntax in javascript. It has both pros and cons
@@ -1984,7 +1937,7 @@ Cons
 Too verbose
 Imperative
 You might face one-by-off errors
-⬆ Back to Top
+
 
 How do you display the current date in javascript
 You can use new Date() to generate a new Date object containing the current date and time. For example, let's display the current date in mm/dd/yyyy
@@ -1996,7 +1949,7 @@ var yyyy = today.getFullYear();
 
 today = mm + "/" + dd + "/" + yyyy;
 document.write(today);
-⬆ Back to Top
+
 
 How do you compare two date objects
 You need to use date.getTime() method to compare date values instead of comparison operators (==, !=, ===, and !== operators)
@@ -2005,14 +1958,13 @@ var d1 = new Date();
 var d2 = new Date(d1);
 console.log(d1.getTime() === d2.getTime()); //True
 console.log(d1 === d2); // False
-⬆ Back to Top
 
 How do you check if a string starts with another string
 You can use ECMAScript 6's String.prototype.startsWith() method to check if a string starts with another string or not. But it is not yet supported in all browsers. Let's see an example to see this usage,
 
 "Good morning".startsWith("Good"); // true
 "Good morning".startsWith("morning"); // false
-⬆ Back to Top
+
 
 How do you trim a string in javascript
 JavaScript provided a trim method on string types to trim any whitespaces present at the beginning or ending of the string.
@@ -2029,7 +1981,7 @@ if (!String.prototype.trim) {
     };
   })();
 }
-⬆ Back to Top
+
 
 How do you add a key value pair in javascript
 There are two possible solutions to add new properties to an object. Let's take a simple object to explain these solutions.
@@ -2042,7 +1994,7 @@ Using dot notation: This solution is useful when you know the name of the proper
 object.key3 = "value3";
 Using square bracket notation: This solution is useful when the name of the property is dynamically determined.
 obj["key3"] = "value3";
-⬆ Back to Top
+
 
 Is the !-- notation represents a special operator
 No,that's not a special operator. But it is a combination of 2 standard operators one after the other,
@@ -2051,7 +2003,7 @@ A logical not (!)
 A prefix decrement (--)
 At first, the value decremented by one and then tested to see if it is equal to zero or not for determining the truthy/falsy value.
 
-⬆ Back to Top
+
 
 How do you assign default values to variables
 You can use the logical or operator || in an assignment expression to provide a default value. The syntax looks like as below,
@@ -2059,7 +2011,7 @@ You can use the logical or operator || in an assignment expression to provide a 
 var a = b || c;
 As per the above expression, variable 'a 'will get the value of 'c' only if 'b' is falsy (if is null, false, undefined, 0, empty string, or NaN), otherwise 'a' will get the value of 'b'.
 
-⬆ Back to Top
+
 
 How do you define multiline strings
 You can define multiline string literals using the '\' character followed by line terminator.
@@ -4110,7 +4062,7 @@ Explanation: Due to the event queue/loop of javascript, the setTimeout callback 
 
 Whereas in the second loop, the variable i is declared as the let keyword it becomes a block scoped variable and it holds a new value(0, 1 ,2 3) for each iteration. Hence, the output of the first loop is 0 1 2 3.
 
-⬆ Back to Top
+
 
 List down some of the features of ES6
 Below are the list of some new features of ES6,
@@ -4127,12 +4079,12 @@ Enhanced Object Literals
 Promises
 Classes
 Modules
-⬆ Back to Top
+
 
 What is ES6
 ES6 is the sixth edition of the javascript language and it was released in June 2015. It was initially known as ECMAScript 6 (ES6) and later renamed to ECMAScript 2015. Almost all the modern browsers support ES6 but for the old browsers there are many transpilers, like Babel.js etc.
 
-⬆ Back to Top
+
 
 Can I redeclare let and const variables
 No, you cannot redeclare let and const variables. If you do, it throws below error
@@ -4159,7 +4111,7 @@ function myFunc() {
 
 myFunc();
 alert(name);
-⬆ Back to Top
+
 
 Is const variable makes the value immutable
 No, the const variable doesn't make the value immutable. But it disallows subsequent assignments(i.e, You can declare with assignment but can't assign another value later)
@@ -4167,7 +4119,7 @@ No, the const variable doesn't make the value immutable. But it disallows subseq
 const userList = [];
 userList.push("John"); // Can mutate even though it can't re-assign
 console.log(userList); // ['John']
-⬆ Back to Top
+
 
 What are default parameters
 In ES5, we need to depend on logical OR operators to handle default values of function parameters. Whereas in ES6, Default function parameters feature allows parameters to be initialized with default values if no value or undefined is passed. Let's compare the behavior with an examples,
@@ -4188,7 +4140,7 @@ var calculateArea = function (height = 50, width = 60) {
 };
 
 console.log(calculateArea()); //300
-⬆ Back to Top
+
 
 What are template literals
 Template literals or template strings are string literals allowing embedded expressions. These are enclosed by the back-tick (`) character instead of double or single quotes. In ES6, this feature enables using dynamic expressions as below,
@@ -4199,7 +4151,7 @@ In ES5, you need break string like below,
 var greeting = 'Welcome to JS World, Mr. ' + firstName + ' ' + lastName.`
 Note: You can use multi-line strings and string interpolation features with template literals.
 
-⬆ Back to Top
+
 
 How do you write multi-line strings in template literals
 In ES5, you would have to use newline escape characters('\n') and concatenation symbols(+) in order to get multi-line strings.
@@ -4704,7 +4656,6 @@ Object.assign(User.prototype, cleanRoomMixin);
 
 // now User can clean the room
 new User("Dude").cleanRoom(); // Hello Dude, your room is clean now!
-⬆ Back to Top
 
 What is a thunk function
 A thunk is just a function which delays the evaluation of the value. It doesn’t take any arguments but gives the value whenever you invoke the thunk. i.e, It is used not to execute now but it will be sometime in the future. Let's take a synchronous example,
@@ -4734,7 +4685,7 @@ const asyncThunk = function () {
 asyncThunk();
 The getData function won't be called immediately but it will be invoked only when the data is available from API endpoint. The setTimeout function is also used to make our code asynchronous. The best real time example is redux state management library which uses the asynchronous thunks to delay the actions to dispatch.
 
-⬆ Back to Top
+
 
 What is the output of below function calls
 Code snippet:
@@ -4752,7 +4703,7 @@ Output:
 
 The output is 40 and NaN. Remember that diameter is a regular function, whereas the value of perimeter is an arrow function. The this keyword of a regular function(i.e, diameter) refers to the surrounding scope which is a class(i.e, Shape object). Whereas this keyword of perimeter function refers to the surrounding scope which is a window object. Since there is no radius property on window objects it returns an undefined value and the multiple of number value returns NaN value.
 
-⬆ Back to Top
+
 
 How to remove all line breaks from a string
 The easiest approach is using regular expressions to detect and replace newlines in the string. In this case, we use replace function along with string to replace with, which in our case is an empty string.
@@ -4762,18 +4713,17 @@ function remove_linebreaks( var message ) {
 }
 In the above expression, g and m are for global and multiline flags.
 
-⬆ Back to Top
+
 
 What is the difference between reflow and repaint
 A repaint occurs when changes are made which affect the visibility of an element, but not its layout. Examples of this include outline, visibility, or background color. A reflow involves changes that affect the layout of a portion of the page (or the whole page). Resizing the browser window, changing the font, content changing (such as user typing text), using JavaScript methods involving computed styles, adding or removing elements from the DOM, and changing an element's classes are a few of the things that can trigger reflow. Reflow of an element causes the subsequent reflow of all child and ancestor elements as well as any elements following it in the DOM.
 
-⬆ Back to Top
+
 
 What happens with negating an array
 Negating an array with ! character will coerce the array into a boolean. Since Arrays are considered to be truthy So negating it will return false.
 
 console.log(![]); // false
-⬆ Back to Top
 
 What happens if we add two arrays
 If you add two arrays together, it will convert them both to strings and concatenate them. For example, the result of adding arrays would be as below,
@@ -4781,7 +4731,7 @@ If you add two arrays together, it will convert them both to strings and concate
 console.log(["a"] + ["b"]); // "ab"
 console.log([] + []); // ""
 console.log(![] + []); // "false", because ![] returns false.
-⬆ Back to Top
+
 
 What is the output of prepend additive operator on falsy values
 If you prepend the additive(+) operator on falsy values(null, undefined, NaN, false, ""), the falsy value converts to a number value zero. Let's display them on browser console as below,
@@ -4791,7 +4741,7 @@ console.log(+undefined); // NaN
 console.log(+false); // 0
 console.log(+NaN); // NaN
 console.log(+""); // 0
-⬆ Back to Top
+
 
 How do you create self string using special characters
 The self string can be formed with the combination of []()!+ characters. You need to remember the below conventions to achieve this pattern.
@@ -4815,20 +4765,18 @@ Now the character pattern would be created as below,
 (![] + [])[+[]]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 (![]+[])[+!+[]+!+[]+!+[]]+(![]+[])[+!+[]+!+[]+!+[]+!+[]]+(![]+[])[+!+[]+!+[]]+(![]+[])[+[]]
-⬆ Back to Top
 
 How do you remove falsy values from an array
 You can apply the filter method on the array by passing Boolean as a parameter. This way it removes all falsy values(0, undefined, null, false and "") from the array.
 
 const myArray = [false, null, 1, 5, undefined];
 myArray.filter(Boolean); // [1, 5] // is same as myArray.filter(x => x);
-⬆ Back to Top
+
 
 How do you get unique values of an array
 You can get unique values of an array with the combination of Set and rest expression/spread(...) syntax.
 
 console.log([...new Set([1, 2, 4, 4, 3])]); // [1, 2, 4, 3]
-⬆ Back to Top
 
 What is destructuring aliases
 Sometimes you would like to have a destructured variable with a different name than the property name. In that case, you'll use a : newName to specify a name for the variable. This process is called destructuring aliases.
@@ -4836,7 +4784,7 @@ Sometimes you would like to have a destructured variable with a different name t
 const obj = { x: 1 };
 // Grabs obj.x as as { otherName }
 const { x: otherName } = obj;
-⬆ Back to Top
+
 
 How do you map the array values without using map method
 You can map the array values without using the map method by just using the from method of Array. Let's map city names from Countries array,
@@ -4852,21 +4800,21 @@ const countries = [
 
 const cityNames = Array.from(countries, ({ capital }) => capital);
 console.log(cityNames); // ['Delhi, 'Washington', 'Moscow', 'Singapore', 'Beijing', 'Paris']
-⬆ Back to Top
+
 
 How do you empty an array
 You can empty an array quickly by setting the array length to zero.
 
 let cities = ["Singapore", "Delhi", "London"];
 cities.length = 0; // cities becomes []
-⬆ Back to Top
+
 
 How do you rounding numbers to certain decimals
 You can round numbers to a certain number of decimals using toFixed method from native javascript.
 
 let pie = 3.141592653;
 pie = pie.toFixed(3); // 3.142
-⬆ Back to Top
+
 
 What is the easiest way to convert an array to an object
 You can convert an array to an object with the same data using spread(...) operator.
@@ -4874,7 +4822,7 @@ You can convert an array to an object with the same data using spread(...) opera
 var fruits = ["banana", "apple", "orange", "watermelon"];
 var fruitsObject = { ...fruits };
 console.log(fruitsObject); // {0: "banana", 1: "apple", 2: "orange", 3: "watermelon"}
-⬆ Back to Top
+
 
 How do you create an array with some data
 You can create an array with some data or an array with the same values using fill method.
@@ -5262,22 +5210,20 @@ Babel is a JavaScript transpiler to convert ECMAScript 2015+ code into a backwar
 Transform syntax
 Polyfill features that are missing in your target environment (using @babel/polyfill)
 Source code transformations (or codemods)
-⬆ Back to Top
+
 
 Is Node.js completely single threaded
 Node is a single thread, but some of the functions included in the Node.js standard library(e.g, fs module functions) are not single threaded. i.e, Their logic runs outside of the Node.js single thread to improve the speed and performance of a program.
 
-⬆ Back to Top
+
 
 What are the common use cases of observables
 Some of the most common use cases of observables are web sockets with push notifications, user input changes, repeating intervals, etc
 
-⬆ Back to Top
 
 What is RxJS
 RxJS (Reactive Extensions for JavaScript) is a library for implementing reactive programming using observables that makes it easier to compose asynchronous or callback-based code. It also provides utility functions for creating and working with observables.
 
-⬆ Back to Top
 
 What is the difference between Function constructor and function declaration
 The functions which are created with Function constructor do not create closures to their creation contexts but they are always created in the global scope. i.e, the function can access its own local variables and global scope variables only. Whereas function declarations can access outer function variables(closures) too.
@@ -5302,7 +5248,7 @@ function createFunction() {
   };
 }
 console.log(createFunction()()); // 200
-⬆ Back to Top
+
 
 What is a Short circuit condition
 Short circuit conditions are meant for condensed way of writing simple if statements. Let's demonstrate the scenario using an example. If you would like to login to a portal with an authentication condition, the expression would be as below,
@@ -5313,7 +5259,7 @@ if (authenticate) {
 Since the javascript logical operators evaluated from left to right, the above expression can be simplified using && logical operator
 
 authenticate && loginToPorta();
-⬆ Back to Top
+
 
 What is the easiest way to resize an array
 The length property of an array is useful to resize or empty an array quickly. Let's apply length property on number array to resize the number of elements from 5 to 2,
@@ -5330,7 +5276,7 @@ var array = [1, 2, 3, 4, 5];
 array.length = 0;
 console.log(array.length); // 0
 console.log(array); // []
-⬆ Back to Top
+
 
 What is an observable
 An Observable is basically a function that can return a stream of values either synchronously or asynchronously to an observer over time. The consumer can get the value by calling subscribe() method. Let's look at a simple example of an Observable
@@ -5348,7 +5294,7 @@ Screenshot
 
 Note: Observables are not part of the JavaScript language yet but they are being proposed to be added to the language
 
-⬆ Back to Top
+
 
 What is the difference between function and class declarations
 The main difference between function declarations and class declarations is hoisting. The function declarations are hoisted but not class declarations.
@@ -5363,7 +5309,6 @@ Constructor Function:
 const user = new User(); // No error
 
 function User() {}
-⬆ Back to Top
 
 What is an async function
 An async function is a function declared with the async keyword which enables asynchronous, promise-based behavior to be written in a cleaner style by avoiding promise chains. These functions can contain zero or more await expressions.
@@ -5377,7 +5322,7 @@ async function logger() {
 logger();
 It is basically syntax sugar over ES2015 promises and generators.
 
-⬆ Back to Top
+
 
 How do you prevent promises swallowing errors
 While using asynchronous code, JavaScript’s ES6 promises can make your life a lot easier without having callback pyramids and error handling on every second line. But Promises have some pitfalls and the biggest one is swallowing errors by default.
@@ -5437,12 +5382,12 @@ Promise.onPossiblyUnhandledRejection(function (error) {
 and discard a rejection, just handle it with an empty catch
 
 Promise.reject("error value").catch(function () {});
-⬆ Back to Top
+
 
 What is deno
 Deno is a simple, modern and secure runtime for JavaScript and TypeScript that uses V8 JavaScript engine and the Rust programming language.
 
-⬆ Back to Top
+
 
 How do you make an object iterable in javascript
 By default, plain objects are not iterable. But you can make the object iterable by defining a Symbol.iterator property on it.
@@ -5490,7 +5435,7 @@ console.log(iterator.next()); // {value: 1, done: false}
 console.log(iterator.next()); // {value: 2, done: false}
 console.log(iterator.next()); // {value: 3, done: false}
 console.log(iterator.next()); // {value: undefined, done: true}
-⬆ Back to Top
+
 
 What is a Proper Tail Call
 First, we should know about tail call before talking about "Proper Tail Call". A tail call is a subroutine or function call performed as the final action of a calling function. Whereas Proper tail call(PTC) is a technique where the program or code will not create additional stack frames for a recursion when the function call is a tail call.
@@ -5515,7 +5460,7 @@ function factorial(n, acc = 1) {
 console.log(factorial(5)); //120
 The above pattern returns the same output as the first one. But the accumulator keeps track of total as an argument without using stack memory on recursive calls.
 
-⬆ Back to Top
+
 
 How do you check an object is a promise or not
 If you don't know if a value is a promise or not, wrapping the value as Promise.resolve(value) which returns a promise
@@ -5547,7 +5492,7 @@ var promise = new Promise(function (resolve, reject) {
 
 console.log(isPromise(i)); // false
 console.log(isPromise(promise)); // true
-⬆ Back to Top
+
 
 How to detect if a function is called as constructor
 You can use new.target pseudo-property to detect whether a function was called as a constructor(using the new operator) or as a regular function call.
@@ -5565,7 +5510,7 @@ function Myfunc() {
 new Myfunc(); // called with new
 Myfunc(); // not called with new
 Myfunc.call({}); // not called with new
-⬆ Back to Top
+
 
 What are the differences between arguments object and rest parameter
 There are three main differences between arguments object and rest parameters
@@ -5573,7 +5518,6 @@ There are three main differences between arguments object and rest parameters
 The arguments object is an array-like but not an array. Whereas the rest parameters are array instances.
 The arguments object does not support methods such as sort, map, forEach, or pop. Whereas these methods can be used in rest parameters.
 The rest parameters are only the ones that haven’t been given a separate name, while the arguments object contains all arguments passed to the function
-⬆ Back to Top
 
 What are the differences between spread operator and rest parameter
 Rest parameter collects all remaining elements into an array. Whereas Spread operator allows iterables( arrays / objects / strings ) to be expanded into single arguments/elements. i.e, Rest parameter is opposite to the spread operator.
@@ -5642,7 +5586,6 @@ Maps: iterate over its key-value pairs
 Sets: iterates over their elements
 arguments: An array-like special variable in functions
 DOM collection such as NodeList
-⬆ Back to Top
 
 What are the differences between for...of and for...in statements
 Both for...in and for...of statements iterate over js data structures. The only difference is over what they iterate:
@@ -5666,7 +5609,6 @@ for (let value of arr) {
 }
 Since for..in loop iterates over the keys of the object, the first loop logs 0, 1, 2 and newProp while iterating over the array object. The for..of loop iterates over the values of a arr data structure and logs a, b, c in the console.
 
-⬆ Back to Top
 
 How do you define instance and non-instance properties
 The Instance properties must be defined inside of class methods. For example, name and age properties defined inside constructor as below,
@@ -5681,7 +5623,6 @@ But Static(class) and prototype data properties must be defined outside of the C
 
 Person.staticAge = 30;
 Person.prototype.prototypeAge = 40;
-⬆ Back to Top
 
 What is the difference between isNaN and Number.isNaN?
 isNaN: The global function isNaN converts the argument to a Number and returns true if the resulting value is NaN.
@@ -5690,7 +5631,6 @@ Let's see the difference with an example,
 
 isNaN(‘hello’);   // true
 Number.isNaN('hello'); // false
-⬆ Back to Top
 
 How to invoke an IIFE without any extra brackets?
 Immediately Invoked Function Expressions(IIFE) requires a pair of parenthesis to wrap the function which contains set of statements.
@@ -5703,7 +5643,7 @@ Since both IIFE and void operator discard the result of an expression, you can a
 void (function (dt) {
   console.log(dt.toLocaleTimeString());
 })(new Date());
-⬆ Back to Top
+
 
 Is that possible to use expressions in switch cases?
 You might have seen expressions used in switch condition but it is also possible to use for switch cases by assigning true value for the switch condition. Let's see the weather condition based on temparature as an example,
@@ -5720,13 +5660,13 @@ const weather = (function getWeather(temp) {
       return "unknown";
   }
 })(10);
-⬆ Back to Top
+
 
 What is the easiest way to ignore promise errors?
 The easiest and safest way to ignore promise errors is void that error. This approach is ESLint friendly too.
 
 await promise.catch((e) => void e);
-⬆ Back to Top
+
 
 How do style the console output using CSS?
 You can add CSS styling to the console output using the CSS format content specifier %c. The console string message can be appended after the specifier and CSS style in another argument. Let's print the red the color text using console.log and CSS specifier as below,
@@ -5738,7 +5678,7 @@ console.log(
   "%cThis is a red text with bigger font",
   "color:red; font-size:20px"
 );
-⬆ Back to Top
+
 
 What is nullish coalescing operator (??)?
 It is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand. This can be contrasted with the logical OR (||) operator, which returns the right-hand side operand if the left operand is any falsy value, not only null or undefined.
@@ -5746,7 +5686,7 @@ It is a logical operator that returns its right-hand side operand when its left-
 console.log(null ?? true); // true
 console.log(false ?? true); // false
 console.log(undefined ?? true); // true
-⬆ Back to Top
+
 
 How do you group and nest console output?
 The console.group() can be used to group related log messages to be able to easily read the logs and use console.groupEnd()to close the group. Along with this, you can also nest groups which allows to output message in hierarchical manner.
@@ -5770,7 +5710,7 @@ console.groupEnd();
 console.groupEnd();
 You can also use console.groupCollapsed() instead of console.group() if you want the groups to be collapsed by default.
 
-⬆ Back to Top
+
 
 What is the difference between dense and sparse arrays?
 An array contains items at each index starting from first(0) to last(array.length - 1) is called as Dense array. Whereas if at least one item is missing at any index, the array is called as sparse.
@@ -5789,7 +5729,7 @@ console.log(justiceLeague[1]); // 'Aquaman'
 console.log(justiceLeague[2]); // undefined
 console.log(justiceLeague[3]); // 'Batman'
 console.log(justiceLeague.length); // 4
-⬆ Back to Top
+
 
 What are the different ways to create sparse arrays?
 There are 4 different ways to create sparse arrays in JavaScript
@@ -5808,7 +5748,7 @@ Increase length property: Increasing length property of an array
 const justiceLeague = ["Superman", "Aquaman", "Batman"];
 justiceLeague.length = 5;
 console.log(justiceLeague); // ['Superman', 'Aquaman', 'Batman', empty, empty]
-⬆ Back to Top
+
 
 What is the difference between setTimeout, setImmediate and process.nextTick?
 Set Timeout: setTimeout() is to schedule execution of a one-time callback after delay milliseconds.
@@ -5884,7 +5824,7 @@ Use custome element just like other HTML element: Declare your custom element as
    <body>
         <custom-element>
    </body>
-⬆ Back to Top
+
 
 What is global execution context?
 The global execution context is the default or first execution context that is created by the JavaScript engine before any code is executed(i.e, when the file first loads in the browser). All the global code that is not inside a function or object will be executed inside this global execution context. Since JS engine is single threaded there will be only one global environment and there will be only one global execution context.
@@ -5906,12 +5846,11 @@ function A() {
 A();
 
 console.log("GlobalContext");
-⬆ Back to Top
+
 
 What is function execution context?
 Whenever a function is invoked, the JavaScript engine creates a different type of Execution Context known as a Function Execution Context (FEC) within the Global Execution Context (GEC) to evaluate and execute the code within that function.
 
-⬆ Back to Top
 
 What is debouncing?
 Debouncing is a programming pattern that allows delaying execution of some piece of code until a specified time to avoid unnecessary CPU cycles, API calls and improve performance. The debounce function make sure that your code is only triggered once per user input. The common usecases are Search box suggestions, text-field auto-saves, and eliminating double-button clicks.
@@ -5942,7 +5881,6 @@ Button:
 Windows event:
 
 window.addEventListener("scroll", processChange);
-⬆ Back to Top
 
 What is throttling?
 Throttling is a technique used to limit the execution of an event handler function, even when this event triggers continuously due to user actions. The common use cases are browser resizing, window scrolling etc.
@@ -5962,7 +5900,7 @@ const throttle = (func, limit) => {
 window.addEventListener("scroll", () => {
   throttle(handleScrollAnimation, 100);
 });
-⬆ Back to Top
+
 
 What is optional chaining?
 According to MDN official docs, the optional chaining operator (?.) permits reading the value of a property located deep within a chain of connected objects without having to expressly validate that each reference in the chain is valid.
@@ -5982,7 +5920,6 @@ console.log(dogName);
 
 console.log(adventurer.someNonExistentMethod?.());
 // expected output: undefined
-⬆ Back to Top
 
 What is an environment record?
 According to ECMAScript specification 262 (9.1):
@@ -5993,7 +5930,7 @@ Usually an Environment Record is associated with some specific syntactic structu
 
 Each time such code is evaluated, a new Environment Record is created to record the identifier bindings that are created by that code.
 
-⬆ Back to Top
+
 
 How to verify if a variable is an array?
 It is possible to check if a variable is an array instance using 3 different ways,
@@ -6046,7 +5983,7 @@ user2.age = 30;
 console.log(user1.age, user2.age); // 30, 30
 In the above code snippet, updating the age property of one object will impact the other property due to the same reference.
 
-⬆ Back to Top
+
 
 What are the differences between primitives and non-primitives?
 JavaScript language has both primitives and non-primitives but there are few differences between them as below,
@@ -6057,7 +5994,7 @@ These are immutable	Mutable
 Compare by value	Compare by reference
 Stored in Stack	Stored in heap
 Contain certain value	Can contain NULL too
-⬆ Back to Top
+
 
 How do you create your own bind method using either call or apply method?
 The custom bind function needs to be created on Function prototype inorder to use it as other builtin functions. This custom function should return a function similar to original bind method and the implementation of inner function needs to use apply method call.
@@ -6073,7 +6010,6 @@ Function.prototype.myOwnBind = function (whoIsCallingMe) {
     boundTargetFunction.apply(whoIsCallingMe, arguments);
   };
 };
-⬆ Back to Top
 
 What are the differences between pure and impure functions?
 Some of the major differences between pure and impure function are as below,
@@ -6082,7 +6018,7 @@ Pure function	Impure function
 It has no side effects	It causes side effects
 It is always return the same result	It returns different result on each call
 Easy to read and debug	Difficult to read and debug because they are affected by extenal code
-⬆ Back to Top
+
 
 What is referential transparency?
 An expression in javascript that can be replaced by its value without affecting the behaviour of the program is called referential transparency. Pure functions are referentially transparent.
@@ -6104,12 +6040,12 @@ Mutating the input data
 Printing to a screen or console: For example, console.log() and alert()
 Fetching the current time
 Math.random() calls: Modifies the internal state of Math object
-⬆ Back to Top
+
 
 What are compose and pipe functions?
 The "compose" and "pipe" are two techniques commonly used in functional programming to simplify complex operations and make code more readable. They are not native to JavaScript and higher-order functions. the compose() applies right to left any number of functions to the output of the previous function.
 
-⬆ Back to Top
+
 
 What is module pattern?
 Module pattern is a designed pattern used to wrap a set of variables and functions together in a single scope returned as an object. JavaScript doesn't have access specifiers similar to other languages(Java, Python, etc) to provide private scope. It uses IIFE (Immediately invoked function expression) to allow for private scopes. i.e., a closure that protect variables and methods.
@@ -6147,7 +6083,7 @@ console.log(createEmployee.getName());
 console.log(createEmployee.getDepartment());
 Note: It mimic the concepts of classes with private variables and methods.
 
-⬆ Back to Top
+
 
 What is Function Composition?
 It is an approach where the result of one function is passed on to the next function, which is passed to another until the final function is executed for the final result.
@@ -6162,7 +6098,7 @@ console.log(output2);
 
 var output_final = square(double(2));
 console.log(output_final);
-⬆ Back to Top
+
 
 How to use await outside of async function prior to ES2022?
 Prior to ES2022, if you attempted to use an await outside of an async function resulted in a SyntaxError.
@@ -6176,7 +6112,7 @@ But you can fix this issue with an alternative IIFE (Immediately Invoked Functio
 In ES2022, you can write top-level await without writing any hacks.
 
 await Promise.resolve(console.log("Hello await")); //Hello await
-⬆ Back to Top
+
 
 Coding Exercise
 1. What is the output of below code
@@ -6274,7 +6210,7 @@ console.log(myChars.length);
 3: [empty, 'b', 'c', 'd'], undefined, 4
 4: [null, 'b', 'c', 'd'], undefined, 4
 Answer
-⬆ Back to Top
+
 
 8. What is the output of below code in latest Chrome
 var array1 = new Array(3);
@@ -6291,7 +6227,7 @@ console.log(array3);
 3: [null × 3], [null × 2, 100], [null × 3]
 4: [], [100], []
 Answer
-⬆ Back to Top
+
 
 9. What is the output of below code
 const obj = {
@@ -6314,7 +6250,7 @@ console.log(obj.prop3());
 3: 0, { return 1 }, { return 2 }
 4: 0, 1, undefined
 Answer
-⬆ Back to Top
+
 
 10. What is the output of below code
 console.log(1 < 2 < 3);
@@ -6324,7 +6260,7 @@ console.log(3 > 2 > 1);
 3: SyntaxError, SyntaxError,
 4: false, false
 Answer
-⬆ Back to Top
+
 
 11. What is the output of below code in non-strict mode
 function printNumbers(first, second, first) {
@@ -6336,7 +6272,7 @@ printNumbers(1, 2, 3);
 3: SyntaxError: Duplicate parameter name not allowed in this context
 4: 1, 2, 1
 Answer
-⬆ Back to Top
+
 
 12. What is the output of below code
 const printNumbersArrow = (first, second, first) => {
@@ -6348,7 +6284,7 @@ printNumbersArrow(1, 2, 3);
 3: SyntaxError: Duplicate parameter name not allowed in this context
 4: 1, 2, 1
 Answer
-⬆ Back to Top
+
 
 13. What is the output of below code
 const arrowFunc = () => arguments.length;
@@ -6375,7 +6311,7 @@ console.log(Math.max());
 3: 0
 4: -Infinity
 Answer
-⬆ Back to Top
+
 
 16. What is the output of below code
 console.log(10 == [10]);
@@ -6385,7 +6321,7 @@ console.log(10 == [[[[[[[10]]]]]]]);
 3: False, False
 4: False, True
 Answer
-⬆ Back to Top
+
 
 17. What is the output of below code
 console.log(10 + "10");
@@ -6395,7 +6331,7 @@ console.log(10 - "10");
 3: 1010, 10-10
 4: NaN, NaN
 Answer
-⬆ Back to Top
+
 
 18. What is the output of below code
 console.log([0] == false);
@@ -6416,7 +6352,7 @@ console.log([1, 2] + [3, 4]);
 3: SyntaxError
 4: 1,23,4
 Answer
-⬆ Back to Top
+
 
 20. What is the output of below code
 const numbers = new Set([1, 1, 2, 3, 4]);
@@ -6428,15 +6364,13 @@ console.log(browser);
 2: {1, 2, 3, 4}, {"F", "i", "r", "e", "o", "x"}
 3: [1, 2, 3, 4], ["F", "i", "r", "e", "o", "x"]
 4: {1, 1, 2, 3, 4}, {"F", "i", "r", "e", "f", "o", "x"}
-Answer
-⬆ Back to Top
 
 21. What is the output of below code
 console.log(NaN === NaN);
 1: True
 2: False
 Answer
-⬆ Back to Top
+
 
 22. What is the output of below code
 let numbers = [1, 2, 3, 4, NaN];
@@ -6445,8 +6379,7 @@ console.log(numbers.indexOf(NaN));
 2: NaN
 3: SyntaxError
 4: -1
-Answer
-⬆ Back to Top
+
 
 23. What is the output of below code
 let [a, ...b,] = [1, 2, 3, 4, 5];
@@ -6456,7 +6389,7 @@ console.log(a, b);
 3: SyntaxError
 4: 1, [2, 3, 4]
 Answer
-⬆ Back to Top
+
 
 25. What is the output of below code
 async function func() {
@@ -6468,7 +6401,6 @@ console.log(func());
 3: SyntaxError
 4: Promise {<rejected>: 10}
 Answer
-⬆ Back to Top
 
 26. What is the output of below code
 async function func() {
@@ -6480,7 +6412,7 @@ console.log(func());
 3: SyntaxError
 4: Promise {<resolved>: undefined}
 Answer
-⬆ Back to Top
+
 
 27. What is the output of below code
 function delay() {
@@ -6528,7 +6460,6 @@ process([1, 2, 3, 5]);
 3: Process completed! and 5 5 5 5
 4: Process completed! and 1 2 3 5
 Answer
-⬆ Back to Top
 
 29. What is the output of below code
 var set = new Set();
@@ -6539,7 +6470,6 @@ console.log(set);
 3: Set(5) {"+0", "-0", NaN, undefined, NaN}
 4: Set(4) {"+0", NaN, undefined, NaN}
 Answer
-⬆ Back to Top
 
 30. What is the output of below code
 const sym1 = Symbol("one");
@@ -6554,7 +6484,7 @@ console.log(sym1 === sym2, sym3 === sym4);
 3: false, true
 4: false, false
 Answer
-⬆ Back to Top
+
 
 31. What is the output of below code
 const sym1 = new Symbol("one");
@@ -6564,7 +6494,6 @@ console.log(sym1);
 3: Symbol('one')
 4: Symbol
 Answer
-⬆ Back to Top
 
 32. What is the output of below code
 let myNumber = 100;
@@ -6600,7 +6529,6 @@ console.log(
 3: {"myArray":['one', null,null,null]}, "{ [Symbol.for('one')]: 'one' }, [Symbol.for('one')]"
 4: {"myArray":['one', undefined, function(){}, Symbol('')]}, {}
 Answer
-⬆ Back to Top
 
 34. What is the output of below code
 class A {
@@ -6630,7 +6558,6 @@ console.log(x, y, z);
 3: 1, [2], 3
 4: SyntaxError
 Answer
-⬆ Back to Top
 
 36. What is the output of below code
 const { a: x = 10, b: y = 20 } = { a: 30 };
@@ -6642,7 +6569,6 @@ console.log(y);
 3: 10, undefined
 4: 30, undefined
 Answer
-⬆ Back to Top
 
 37. What is the output of below code
 function area({ length = 10, width = 20 }) {
@@ -6671,7 +6597,7 @@ console.log(name);
 3: undefined
 4: John
 Answer
-⬆ Back to Top
+
 
 39. What is the output of below code
 function checkType(num = 1) {
@@ -6700,7 +6626,7 @@ console.log(add("Apple"));
 1: ['Orange'], ['Orange', 'Apple']
 2: ['Orange'], ['Apple']
 Answer
-⬆ Back to Top
+
 
 41. What is the output of below code
 function greet(greeting, name, message = greeting + " " + name) {
@@ -6712,7 +6638,7 @@ greet("Hello", "John", "Good morning!");
 1: SyntaxError
 2: ['Hello', 'John', 'Hello John'], ['Hello', 'John', 'Good morning!']
 Answer
-⬆ Back to Top
+
 
 42. What is the output of below code
 function outer(f = inner()) {
@@ -6724,7 +6650,7 @@ outer();
 1: ReferenceError
 2: Inner
 Answer
-⬆ Back to Top
+
 
 43. What is the output of below code
 function myFun(x, y, ...manyMoreArgs) {
@@ -6738,7 +6664,7 @@ myFun(1, 2);
 3: [3, 4, 5], []
 4: [3, 4, 5], [undefined]
 Answer
-⬆ Back to Top
+
 
 44. What is the output of below code
 const obj = { key: "value" };
@@ -6764,7 +6690,7 @@ console.log(myGenObj.next().value);
 3: SyntaxError
 4: TypeError
 Answer
-⬆ Back to Top
+
 
 46. What is the output of below code
 function* yieldAndReturn() {
@@ -6782,7 +6708,7 @@ console.log(myGenObj.next());
 3: { value: 1, done: false }, { value: 2, done: true }, { value: 3, done: true }
 4: { value: 1, done: false }, { value: 2, done: false }, { value: 3, done: true }
 Answer
-⬆ Back to Top
+
 
 47. What is the output of below code
 const myGenerator = (function* () {
@@ -7262,7 +7188,7 @@ console.log(a, "outside");
 3: 10, "inside" and 10, "outside"
 4: 10, "inside" and 20, "outside"
 Answer
-⬆ Back to Top
+
 
 80. What is the output of below code?
 let arr = [1, 2, 3, 4, 5, -6, 7];
