@@ -1,6 +1,9 @@
 
-let firstname='Gopi '
-let lastname='Chowdam'
-let age=26
-console.log('My name is' + firstname+' '+lastname)
-console.log('Age is'+ age)
+var time = new Date();
+
+var seconds = time.getSeconds();
+	
+document.write("Your computer clock seconds are: " +  seconds);
+
+var str = new String( "This String is super  long" );
+document.write("This string is " +str.length + " Characters long"); 
