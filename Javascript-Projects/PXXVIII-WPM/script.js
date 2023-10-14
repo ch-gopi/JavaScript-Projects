@@ -1,4 +1,4 @@
-const wording = ["Do you like JavaScript as much as I do?", "Hope you are having fun this is a simple game you can make.", "Source code is included so you can create your own version of this challenge."];
+const wording = ["Hope you are good"];
 let startTime, endTime;
 const message = document.querySelector(".message");
 const playText = document.querySelector("textarea");
