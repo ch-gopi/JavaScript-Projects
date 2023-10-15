@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="credit-card-form">
+    <h2>Credit Card Payment</h2>
+    <form>
+      <div class="form-group">
+        <label for="card-number">Card Number</label>
+        <input type="text" id="card-number" placeholder="Card number">
+      </div>
+      <div class="form-group">
+        <label for="card-holder">Card Holder</label>
+        <input type="text" id="card-holder" placeholder="Card holder's name">
+      </div>
+      <div class="form-row">
+        <div class="form-group form-column">
+          <label for="expiry-date">Expiry Date</label>
+          <input type="text" id="expiry-date" placeholder="MM/YY">
+        </div>
+        <div class="form-group form-column">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" placeholder="CVV">
+        </div>
+      </div>
+      <button type="submit" class="click-button" onclick="showLoading(event, this)">Pay Now</button>
+    </form>
+    <script type="text/javascript" src="script.js"></script>
+  </div>
+</body>
+</html>
