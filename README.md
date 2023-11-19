@@ -6,8 +6,8 @@
  5) Translate to code.
  6) Run test cases.
 7) Debug failed test cases.
+   #
 The seventh step was to debug failed test cases.
-#
 The first step is that you observe a phenomenon. In the case of your program, this is generally that it crashes or exhibit some incorrect behavior when you test it.
 The next step in the scientific method is to ask a question. 
 The next step is to gather information and apply expert knowledge.  As you gather information, you're going to realize other information you want to gather, and other things you want to think about. You keep doing this step until you're ready to form a hypothesis. When you form a hypothesis you're going to make at some statement which predicts behavior about your program. 
